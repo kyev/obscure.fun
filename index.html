@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="blinking-title">N</title>
+    <link rel="icon" href="images/image-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/cursor.js"></script>
+<script>
+    function audioPlay() {
+        var audio = document.getElementById("audio");
+        audio.volume = 1.0;
+              audio.currentTime = 53;
+        audio.play();
+    }
+  </script></head>
+
+  
+
+  <body style="background-size:cover;background-position:center;"><audio loop="" preload="auto" id="audio">
+    <source src="media/videoplayback.mp4" type="audio/mpeg">
+  </audio>
+
+  <input type="checkbox" autocomplete="off" id="overlay-toggle">
+  <div class="overlay fullscreen">
+    <label for="overlay-toggle" onclick="audioPlay(); ">
+      <span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;">here</span>
+      <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">here</span>
+    </label>
+  </div>
+
+  
+  
+  
+
+
+
+  
+
+    <video autoplay="" loop="" muted="">
+        <source src="media/fds.mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+   
+                <div class="all">
+
+                    <div class="discord-profile">
+                        <div class="profile animate__animated animate__fadeInUp animate__fast">
+      
+                                <div class="pfp">
+                                <img src="images/Ecko.png">
+                                    
+                                </div>
+      
+                                                <div class="nickz"> haha </div>
+                                         <div class="nick subnick">    c7iy   </div>
+                                                 <div class="badges">
+      
+                                                    <!-- Badge 5 -->
+                                                    <div class="badge" style="background-image: url('images/1895-subscriber-nitro-animated.gif');" data-tooltip="Assinante desde 11 de set. de 2001"></div> 
+                                                    <!-- Badge 5 -->
+                                                    <div class="badge" style="background-image: url('images/quadrada.png');" data-tooltip="Assinante desde 11 de set. de 2001"></div>
+      
+                                                 </div>
+      
+                                                <div class="nick subnick">       </div>
+                                                <div class="social-buttons">
+                                                    <a href="https://www.instagram.com/sonderboy7/" target="_blank" class="social-button">
+                                                      <i class="fab fa-instagram social-icon"></i>
+                                                    </a>
+                                                    </a>
+                                                </div>
+      
+                                                
+                                            </div>
+                                    </div>
+      
+      
+                        </div>
+      
+
+                                
+                
+
+<script>
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "fuck you";
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        msg = ""+msg+"";
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+</body></html>
