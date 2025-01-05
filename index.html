@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <video class="vidoverlay" autoplay="" loop="" muted="" src="video.mp4"></video>
+    <video class="vidoverlay" autoplay="" loop="" muted="" src="media/video.mp4"></video>
 
 
     <div class="view-counter">
@@ -128,7 +128,7 @@
         </div>
 
         <audio loop="" preload="auto" id="audio">
-            <source src="video.mp4" type="audio/mpeg">
+            <source src="media/outlier.mp3" type="audio/mpeg">
         </audio>
     </div>
 
@@ -136,7 +136,7 @@
         function playAudio() {
             const audio = document.getElementById("audio");
             audio.volume = 1.0;
-            audio.currentTime = 0;
+            audio.currentTime = 156;
             audio.play();
         }
 
