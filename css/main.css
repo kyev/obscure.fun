@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Graffiti";
+  src: url(https://youtu.be/SnZBwzj8Zyw);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: crosshair;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: monospace !important;
+  background-color: #000001 !important;
+  color: #fff !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.vidoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  opacity: 1;
+  pointer-events: none;
+}
+
+#canvas-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#center {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  z-index: 1;
+}
+
+#overlay-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000001;
+  z-index: 10;
+}
+
+.overlay label {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.graffiti {
+  font-family: "Graffiti", sans-serif;
+}
+
+.hover {
+  text-decoration: none;
+  color: gray !important;
+  transition: color 0.4s ease !important;
+}
+
+.hover:hover {
+  color: #fff !important;
+}
+
+#overlay-toggle:checked ~ .overlay {
+  animation: fade 600ms forwards, hide 1ms 600ms forwards;
+}
+
+#overlay-toggle:checked ~ .overlay label {
+  animation: fade 500ms forwards;
+}
+
+.no-hover {
+  display: block;
+}
+
+@media (hover: hover) {
+  .overlay-hover {
+    display: block;
+  }
+
+  .overlay-no-hover {
+    display: none;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay label {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+  
+  #center {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay label {
+    font-size: clamp(0.875rem, 4vw, 1.25rem);
+  }
+}
